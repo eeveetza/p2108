@@ -1,6 +1,6 @@
 # MATLAB/Octave Implementation of Recommendation ITU-R P.2108
 
-This code repository contains a Java software implementation of Recommendation [ITU-R P.2108-1](https://www.itu.int/rec/R-REC-P.2108/en) with a prediction procedure for  estimating loss through clutter at frequencies between 30 MHz and 100 GHz.  
+This code repository contains a MATLAB/Octave software implementation of Recommendation [ITU-R P.2108-1](https://www.itu.int/rec/R-REC-P.2108/en) with a prediction procedure for  estimating loss through clutter at frequencies between 30 MHz and 100 GHz.  
 
 This version of the code is functionally identical to the reference version approved by ITU-R Working Parties 3K and 3M and published by Study Group 3 on [ITU-R SG 3 Software, Data, and Validation Web Page](https://www.itu.int/en/ITU-R/study-groups/rsg3/Pages/iono-tropo-spheric.aspx).
 
