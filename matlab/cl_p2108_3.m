@@ -149,16 +149,12 @@ if (p > pLoS)
     
     mu =    alpha1 + beta1 * log( 1 + ( 90 - theta) / 90 ) + f.^gamma1;   % (13a)
     sigma = alpha2 + beta2 * log( 1 + ( 90 - theta) / 90 ) + f.^gamma2;   % (13b)
-
-    %Lces = max ( norminv( pp, mu, sigma), 6 );      % (12b)
-    % Using Qinv
-    Qinv = sqrt(2)*erfcinv(2*pp);
-    Lces = max( mu + sigma*Qinv, 6);
-    % Using Finv
-    Finv = sqrt(2) * erfinv(2*pp-1);
+    
+    % Qinv(1-pp) = Finv(pp)
+    Finv = sqrt(2) * erfinv(2*pp-1); % Using definition in P.1057
     
     Lces = max( mu + sigma*Finv, 6);
-    %Lces = max ( norminv( pp, mu, sigma), 6 ); 
+
 
 elseif (p < pFcLoS)
 
