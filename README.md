@@ -56,7 +56,7 @@ Lc = cl_P2108_3(f, th, p, h, hm);
 ~~~
 | Variable          | Type   | Units | Limits       | Description  |
 |-------------------|--------|-------|--------------|--------------|
-| `f`               | scalar double | GHz   | 10 ≤ `f` ≤ 100 | Frequency   |
+| `f`               | scalar double | GHz   | 0.5 ≤ `f` ≤ 100 | Frequency   |
 | `th`          | scalar double | deg   | 0 ≤ `th` ≤ 90  | Elevation angle|
 | `p`           | scalar double    | %     |     0 < p < 100     |  Percentage of locations|
 | `h`           | scalar double    | m     |     h ≥  1     |  Ground station height|
