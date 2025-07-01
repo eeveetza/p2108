@@ -37,7 +37,7 @@ pFcLoS = pFcLoS_p2108_3(f, theta, h, hm);
 
 beta = 17 + 6 * randn;
 
-ptrial = rand(0,100);
+ptrial = 100*rand;
 
 % Clutter loss along the direct path
 
