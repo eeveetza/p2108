@@ -1,6 +1,6 @@
 # MATLAB/Octave Implementation of Recommendation ITU-R P.2108
 
-This development repository contains a MATLAB/Octave software implementation of Recommendation [ITU-R P.2108-2](https://www.itu.int/md/meetingdoc.asp?lang=en&parent=R23-SG03-C-0041) with a prediction procedure for  estimating loss through clutter at frequencies between 30 MHz and 100 GHz.  
+This development branch contains a MATLAB/Octave software implementation of draft Recommendation ITU-R P.2108-2 ([3/41](https://www.itu.int/md/meetingdoc.asp?lang=en&parent=R23-SG03-C-0041)) with a prediction procedure for  estimating loss through clutter at frequencies between 30 MHz and 100 GHz.  
 
 This version of the code implements the newly developped Earth-space and aeronautical statistical clutter loss model of section 3.3.
 <!-- This version of the code is functionally identical to the reference version approved by ITU-R Working Parties 3K and 3M and published by Study Group 3 on [ITU-R SG 3 Software, Data, and Validation Web Page](https://www.itu.int/en/ITU-R/study-groups/rsg3/Pages/iono-tropo-spheric.aspx).-->
@@ -12,7 +12,10 @@ The following table describes the structure of the folder `./matlab/` containing
 |`cl_p2108_1.m`                | Site-specific height gain terminal correction model §3.1      |
 |`cl_p2108_2.m`                | Statistical clutter loss model for terrestrial paths §3.2      |
 |`cl_p2108_3.m`                | Earth-space and Aeronautical statistical clutter loss model  §3.3     |
-|`validate_p2108.m`          | Validation tests against the reference Excel implementation of this Recommendation for a range of location percentages, frequencies, distances and environment categories.          |
+|`tl_p2108_3_2ray.m`          | Transmission loss including the clutter loss (§3.3) as defined in the Attachment of Document [5D/629](https://www.itu.int/md/R23-WP5D-C-0629/en) using 2-ray approximation for directional antennas|
+|`pFcLoS_p2108.m`          | Probability of Fresnel zone clearance as defined in §3.3          |
+|`validate_p2108.m`          | Validation tests against the reference Excel implementation of this Recommendation for a range of location percentages, frequencies, distances and environment categories (currently only for §3.1 and §3.2).          |
+
 
 ## Functions
 
