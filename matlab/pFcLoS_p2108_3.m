@@ -2,7 +2,7 @@ function pFcLoS = pFcLoS_p2108_3(f, theta, h, hm)
 %% pFcLoS_p2108_3 Probability of Fresnel zone clearance according to P.2108-2 §3.3
 %   pFcLoS = pFcLoS_p2108_3(f, theta, h, hm)
 %
-%   This function computes the robability of Fresnel zone clearance 
+%   This function computes the probability of Fresnel zone clearance 
 %   as defined in ITU-R P.2108 (Section 3.3) for Earth to Space and Aeronautical
 %   paths 
 %

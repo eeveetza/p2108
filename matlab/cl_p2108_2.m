@@ -1,5 +1,5 @@
 function Lctt = cl_p2108_2(f, d, p)
-%cl_loss2 clutter loss according to P.2108-1 §3.2
+%cl_p2108_2 clutter loss according to P.2108-1 §3.2
 %   L = cl_p2108_2(f, d, p)
 %
 %   This function computes the statistical distribution of clutter loss
@@ -22,6 +22,7 @@ function Lctt = cl_p2108_2(f, d, p)
 %     -------------------------------------------------------------------------------
 %     v0    01MAY17     Ivica Stevanovic, OFCOM         Initial version
 %     v1    14JUL21     Ivica Stevanovic, OFCOM         Aligned with ITU-R P.2108-1
+%     v2    15JUL25     Ivica Stevanovic, OFCOM         User basic function erfinv instead of norminv 
 
 %% Read the input arguments and check them
 
@@ -42,13 +43,15 @@ sigmal= 4;                                                 %(4b)
 Ls = 32.98 + 23.9*log10(d) + 3*log10(f);                   %(5a)
 sigmas = 6;                                                %(5b)
 
+Finv = sqrt(2) * erfinv(1-2*p/100); % Using definition in P.1057
+    
 sigmacb = sqrt( (sigmal^2*10^(-0.2*Ll) + sigmas^2*10^(-0.2*Ls) ) / (10^(-0.2*Ll) + 10^(-0.2*Ls)) );      %(3b)
 
-Lctt = -5*log10(10^(-0.2*Ll) + 10^(-0.2*Ls)) - sigmacb * norminv(1-p/100, 0, 1);  %(3a)
+Lctt = -5*log10(10^(-0.2*Ll) + 10^(-0.2*Ls)) - sigmacb * Finv;  %(3a)
 
 Ls2 = 32.98 + 23.9*log10(2) + 3*log10(f);   
 sigmacb2 = sqrt( (sigmal^2*10^(-0.2*Ll) + sigmas^2*10^(-0.2*Ls2) ) / (10^(-0.2*Ll) + 10^(-0.2*Ls2)) );      %(3b)
-Lctt2 = -5*log10(10^(-0.2*Ll) + 10^(-0.2*Ls2)) - sigmacb2 * norminv(1-p/100, 0, 1);  %(3a)
+Lctt2 = -5*log10(10^(-0.2*Ll) + 10^(-0.2*Ls2)) - sigmacb2 * Finv;  %(3a)
 
 Lctt = min(Lctt, Lctt2);
 

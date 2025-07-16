@@ -1,5 +1,5 @@
 function Lces = cl_p2108_3(f, theta, p, h, hm)
-%cl_loss3 clutter loss according to P.2108-2 §3.3
+%% cl_p2108_3 clutter loss according to P.2108-2 §3.3
 %   L = cl_p2108_3(f, theta, p, h, hm)
 %
 %   This function computes the statistical distribution of clutter loss
@@ -7,7 +7,7 @@ function Lces = cl_p2108_3(f, theta, p, h, hm)
 %   paths 
 %
 %     Input parameters:
-%     f       -   Frequency (GHz): 10 <= f <= 100
+%     f       -   Frequency (GHz): 0.5 <= f <= 100
 %     theta   -   elevation angle (degrees):  0 <= th <= 90 
 %     p       -   percentage of locations (%): 0 < p < 100
 %     h       -   ground station height (m): h >= 1
@@ -156,7 +156,7 @@ if (p > pLoS)
     Lces = max( mu + sigma*Finv, 6);
 
 
-elseif (p < pFcLoS)
+elseif (p <= pFcLoS)
 
     % Table 10
 
