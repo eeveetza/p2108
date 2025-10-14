@@ -30,6 +30,7 @@ function Lt = tl_p2108_3_2ray(f, theta, p, h, hm, Gt_cld, Gt_clg, Gr, Lb)
 %     Rev   Date        Author                          Description
 %     -------------------------------------------------------------------------------
 %     v0    30JUN25     Ivica Stevanovic, OFCOM         Initial version
+%     v1    14OCT25     Ivica Stevanovic, OFCOM         Modification to the use of location percentage
 
 % Compute the probability of locations with FcLoS
 
@@ -37,11 +38,12 @@ pFcLoS = pFcLoS_p2108_3(f, theta, h, hm);
 
 beta = 17 + 6 * randn;
 
-ptrial = 100*rand;
+%ptrial = 100*rand;
 
 % Clutter loss along the direct path
 
-if (ptrial <= pFcLoS)
+%if (ptrial <= pFcLoS)
+if (p <= pFcLoS)
 
     Lcld = 0;
 

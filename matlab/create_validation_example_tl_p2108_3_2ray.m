@@ -2,21 +2,22 @@
 % which computes the transmission loss including the clutter loss 
 % as defined in ITU-R P.2108 (Section 3.3) for Earth to Space and Aeronautical
 % paths using guidance in Attachment of Document 5D/629 for 2 ray approximation
-% The first-order statistics (median, sigma) are computed across 20000
-% samples; for error tolerance of not exceeding 1 dB.
+% The first-order statistics (median, sigma) are computed across 100000
+% samples; for error tolerance of not exceeding 2 dB for Lt and 0.5 dB for sigma.
 
-% 16JUL25   Ivica Stevanovic
+% 16JUL25               Ivica Stevanovic
+% Modified 14OCT25      Ivica Stevanovic
 
 %% Set the values for the input parameters to tl_p2108_3_2ray
 fGHz =[1, 10, 100];
-theta = [0, 5, 10, 90];
+theta = [0, 10, 45, 90];
 h = [1.5, 10, 30];
 hm = [8, 15, 25];
-Gt_cld = [0, 10, 20];
-Gt_clg = [0, 10, 20];
+Gt_cld = [0, 10];
+Gt_clg = [0, 10];
 Gr = 0;
-Lb = [150, 200];
-Ntot = 20000;
+Lb = [200];
+Ntot = 100000;
 
 %% Progress bar header
 fprintf(1,'0%%----------100%%\n  ');

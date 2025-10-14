@@ -5,7 +5,7 @@
 %     Rev   Date        Author                          Description
 %     -------------------------------------------------------------------------------
 %     v0    01MAY17     Ivica Stevanovic, OFCOM         Initial version
-%     v1    15JUL21     Ivica Stevanovic, OFCOM         Aligned to ITU-R P.2108-1 
+%     v1    15JUL21     Ivica Stevanovic, OFCOM         Aligned to ITU-R P.2108-1
 %     v2    15JUL25     Ivica Stevanovic, OFCOM         Introduced validation for draft Revision ITU-R P.2108-2
 
 % Validation examples for §3.3 still need to be verified/confirmed
@@ -36,17 +36,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test1() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -68,17 +68,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test2() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -100,17 +100,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test3() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -132,17 +132,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test4() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -164,17 +164,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test5() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -195,17 +195,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test6() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -227,17 +227,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test7() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -258,17 +258,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test8() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -290,17 +290,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test9() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -322,17 +322,17 @@ end
 if (seamcat == 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test10() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
+
     fprintf(1,'double f = %f;\n', f);
     fprintf(1,'double h = %f;\n', h);
     fprintf(1,'double ws = %f;\n', ws);
     fprintf(1,'double R = %f;\n', R);
     fprintf(1,'int eqnum = %d;\n', eqnum);
-    
+
     fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-    
+
     fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
     fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
     fprintf(1,'}\n');
@@ -348,70 +348,70 @@ p = [5, 50, 95, 99.9];
 f = 2:66;
 
 Lctt_ref = [    19.2	27.1	34.6	40.4
-20.0	28.3	36.3	42.1
-20.5	29.1	37.5	43.3
-20.8	29.6	38.3	44.2
-21.1	29.9	38.8	44.7
-21.3	30.2	39.1	45.0
-21.4	30.4	39.3	45.2
-21.6	30.5	39.4	45.3
-21.7	30.6	39.5	45.3
-21.8	30.7	39.5	45.4
-21.9	30.8	39.6	45.4
-22.0	30.8	39.6	45.4
-22.1	30.9	39.6	45.4
-22.2	31.0	39.6	45.4
-22.3	31.0	39.6	45.4
-22.4	31.1	39.6	45.4
-22.5	31.1	39.6	45.4
-22.5	31.1	39.6	45.4
-22.6	31.2	39.6	45.4
-22.6	31.2	39.6	45.4
-22.7	31.2	39.6	45.4
-22.7	31.3	39.6	45.4
-22.8	31.3	39.6	45.4
-22.8	31.3	39.6	45.4
-22.9	31.4	39.6	45.4
-22.9	31.4	39.6	45.4
-23.0	31.4	39.6	45.4
-23.0	31.4	39.6	45.4
-23.1	31.5	39.6	45.4
-23.1	31.5	39.6	45.4
-23.1	31.5	39.6	45.4
-23.2	31.5	39.6	45.4
-23.2	31.5	39.6	45.4
-23.2	31.6	39.6	45.4
-23.3	31.6	39.6	45.4
-23.3	31.6	39.6	45.4
-23.3	31.6	39.6	45.4
-23.3	31.6	39.6	45.4
-23.4	31.6	39.6	45.4
-23.4	31.7	39.6	45.4
-23.4	31.7	39.6	45.4
-23.5	31.7	39.6	45.4
-23.5	31.7	39.6	45.4
-23.5	31.7	39.6	45.4
-23.5	31.7	39.6	45.4
-23.6	31.7	39.6	45.4
-23.6	31.8	39.6	45.4
-23.6	31.8	39.6	45.4
-23.6	31.8	39.6	45.4
-23.6	31.8	39.6	45.4
-23.7	31.8	39.6	45.4
-23.7	31.8	39.6	45.4
-23.7	31.8	39.6	45.4
-23.7	31.8	39.6	45.4
-23.7	31.8	39.6	45.4
-23.8	31.8	39.6	45.4
-23.8	31.9	39.6	45.4
-23.8	31.9	39.6	45.4
-23.8	31.9	39.6	45.4
-23.8	31.9	39.6	45.4
-23.8	31.9	39.6	45.4
-23.9	31.9	39.6	45.4
-23.9	31.9	39.6	45.4
-23.9	31.9	39.6	45.4
-23.9	31.9	39.6	45.4
+    20.0	28.3	36.3	42.1
+    20.5	29.1	37.5	43.3
+    20.8	29.6	38.3	44.2
+    21.1	29.9	38.8	44.7
+    21.3	30.2	39.1	45.0
+    21.4	30.4	39.3	45.2
+    21.6	30.5	39.4	45.3
+    21.7	30.6	39.5	45.3
+    21.8	30.7	39.5	45.4
+    21.9	30.8	39.6	45.4
+    22.0	30.8	39.6	45.4
+    22.1	30.9	39.6	45.4
+    22.2	31.0	39.6	45.4
+    22.3	31.0	39.6	45.4
+    22.4	31.1	39.6	45.4
+    22.5	31.1	39.6	45.4
+    22.5	31.1	39.6	45.4
+    22.6	31.2	39.6	45.4
+    22.6	31.2	39.6	45.4
+    22.7	31.2	39.6	45.4
+    22.7	31.3	39.6	45.4
+    22.8	31.3	39.6	45.4
+    22.8	31.3	39.6	45.4
+    22.9	31.4	39.6	45.4
+    22.9	31.4	39.6	45.4
+    23.0	31.4	39.6	45.4
+    23.0	31.4	39.6	45.4
+    23.1	31.5	39.6	45.4
+    23.1	31.5	39.6	45.4
+    23.1	31.5	39.6	45.4
+    23.2	31.5	39.6	45.4
+    23.2	31.5	39.6	45.4
+    23.2	31.6	39.6	45.4
+    23.3	31.6	39.6	45.4
+    23.3	31.6	39.6	45.4
+    23.3	31.6	39.6	45.4
+    23.3	31.6	39.6	45.4
+    23.4	31.6	39.6	45.4
+    23.4	31.7	39.6	45.4
+    23.4	31.7	39.6	45.4
+    23.5	31.7	39.6	45.4
+    23.5	31.7	39.6	45.4
+    23.5	31.7	39.6	45.4
+    23.5	31.7	39.6	45.4
+    23.6	31.7	39.6	45.4
+    23.6	31.8	39.6	45.4
+    23.6	31.8	39.6	45.4
+    23.6	31.8	39.6	45.4
+    23.6	31.8	39.6	45.4
+    23.7	31.8	39.6	45.4
+    23.7	31.8	39.6	45.4
+    23.7	31.8	39.6	45.4
+    23.7	31.8	39.6	45.4
+    23.7	31.8	39.6	45.4
+    23.8	31.8	39.6	45.4
+    23.8	31.9	39.6	45.4
+    23.8	31.9	39.6	45.4
+    23.8	31.9	39.6	45.4
+    23.8	31.9	39.6	45.4
+    23.8	31.9	39.6	45.4
+    23.9	31.9	39.6	45.4
+    23.9	31.9	39.6	45.4
+    23.9	31.9	39.6	45.4
+    23.9	31.9	39.6	45.4
     ];
 
 for pi = 1: length(p)
@@ -426,32 +426,32 @@ fprintf(1, '%d out of %d tests passed.\n', numel(success), numel(Lctt));
 if(seamcat== 1)
     fprintf(1,'@Test\n');
     fprintf(1, 'public void test11() {\n');
-    
+
     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-    
-    
+
+
     fprintf(1,'double[] p = new double[%d];\n', length(p));
     fprintf(1,'double[] f = new double[%d];\n', length(f));
     fprintf(1,'double d = %f;\n', d);
-    
+
     for pi = 1:length(p)
         fprintf(1,'p[%d] = %f;\n', pi-1, p(pi));
     end
-    
+
     for fi = 1:length(f)
         fprintf(1,'f[%d] = %f;\n', fi-1, f(fi));
     end
-    
+
     fprintf(1,'double[] expectedResult = new double[%d];\n', numel(Lctt));
     count = 0;
-    
+
     for pi = 1:length(p)
         for fi = 1:length(f)
             fprintf(1,'expectedResult[%d] = %f;\n', count, Lctt(fi,pi));
             count = count + 1;
         end
     end
-    
+
     fprintf(1,'int count = 0;\n');
     fprintf(1,'for (int pi = 0; pi < %d; pi++) {\n', length(p));
     fprintf(1,'for (int fi = 0; fi < %d; fi++) {\n', length(f));
@@ -469,7 +469,7 @@ end
 
 % Progress bar header
 fprintf(1,'\n validation of cl_p2108_3\n')
-fprintf(1,'0%%----------100%%\n  '); 
+fprintf(1,'0%%----------100%%\n  ');
 
 Y = readcsv('validation_examples/validation_example_p2108_3.csv');
 [nrows, ncols] = size(Y);
@@ -502,34 +502,34 @@ fprintf(1,'\n validation of tl_p2108_3_2ray\n')
 
 Y = readcsv('validation_examples/validation_example_tl_p2108_3_2ray.csv');
 [nrows, ncols] = size(Y);
-Lt_ref = zeros(nrows,1);
 Lt = zeros(nrows,1);
 sigma = zeros(nrows,1);
-sigma_ref = zeros(nrows,1);
 L = zeros(nrows,1);
-Ntot = 20000;
-errortol = 1;
+Ntot = 100000;
+Lt_tol = 2;
+sigma_tol = 0.5;
 % Progress bar header
 fprintf(1,'0%%----------100%%\n  ');
+fGHz   = str2double(Y(:,1));
+theta  = str2double(Y(:,2));
+h      = str2double(Y(:,3));
+hm     = str2double(Y(:,4));
+Gt_cld = str2double(Y(:,5));
+Gt_clg = str2double(Y(:,6));
+Gr     =  str2double(Y(:,7));
+Lb     =  str2double(Y(:,8));
+Lt_ref = str2double(Y(:,9));
+sigma_ref = str2double(Y(:,10));
 
 for i = 1:nrows
-    fGHz   = str2double(Y(i,1));
-    theta  = str2double(Y(i,2));
-    h      = str2double(Y(i,3));
-    hm     = str2double(Y(i,4));
-    Gt_cld = str2double(Y(i,5));
-    Gt_clg = str2double(Y(i,6));
-    Gr     =  str2double(Y(i,7));
-    Lb     =  str2double(Y(i,8));
-    Lt_ref(i) = str2double(Y(i,9));
-    sigma_ref(i) = str2double(Y(i,10));
+
     L = zeros(Ntot,1);
 
     for ii = 1:Ntot
 
         p = 100*rand;
 
-        L(ii) = tl_p2108_3_2ray(fGHz, theta, p, h, hm, Gt_cld, Gt_clg, Gr, Lb);
+        L(ii) = tl_p2108_3_2ray(fGHz(i), theta(i), p, h(i), hm(i), Gt_cld(i), Gt_clg(i), Gr(i), Lb(i));
 
     end
 
@@ -549,40 +549,40 @@ for i = 1:nrows
 
 end
 
-success = find( (abs( Lt-Lt_ref ) <= errortol ) & (abs(sigma-sigma_ref) <= errortol) );
+success = find( (abs( Lt-Lt_ref ) <= Lt_tol ) & (abs(sigma-sigma_ref) <= sigma_tol) );
 
 fprintf(1, '\n %d out of %d tests passed.\n', numel(success), nrows);
 
 % if (seamcat == 1)
 %     fprintf(1,'@Test\n');
 %     fprintf(1, 'public void test12() {\n');
-%     
+%
 %     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-%     
-%     
+%
+%
 %     fprintf(1,'double[] p = new double[%d];\n', length(p));
 %     fprintf(1,'double[] th = new double[%d];\n', length(th));
 %     fprintf(1,'double f = %f;\n', f);
-%     
-%     
+%
+%
 %     for pi = 1:length(p)
 %         fprintf(1,'p[%d] = %f;\n', pi-1, p(pi));
 %     end
-%     
+%
 %     for fi = 1:length(th)
 %         fprintf(1,'th[%d] = %f;\n', fi-1, th(fi));
 %     end
-%     
+%
 %     fprintf(1,'double[] expectedResult = new double[%d];\n', numel(Lces));
 %     count = 0;
-%     
+%
 %     for pi = 1:length(p)
 %         for fi = 1:length(th)
 %             fprintf(1,'expectedResult[%d] = %f;\n', count, Lces(pi,fi));
 %             count = count + 1;
 %         end
 %     end
-%     
+%
 %     fprintf(1,'int count = 0;\n');
 %     fprintf(1,'for (int pi = 0; pi < %d; pi++) {\n', length(p));
 %     fprintf(1,'for (int fi = 0; fi < %d; fi++) {\n', length(th));
