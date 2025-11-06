@@ -31,6 +31,7 @@ function Lt = tl_p2108_3_2ray(f, theta, p, h, hm, Gt_cld, Gt_clg, Gr, Lb)
 %     -------------------------------------------------------------------------------
 %     v0    30JUN25     Ivica Stevanovic, OFCOM         Initial version
 %     v1    14OCT25     Ivica Stevanovic, OFCOM         Modification to the use of location percentage
+%     v2    05NOV25     Ivica Stevanovic, OFCOM         Introduced normalization factor alpha
 
 % Compute the probability of locations with FcLoS
 
@@ -70,7 +71,9 @@ loss = 10.^(Lb/10);
 % The transmission loss between the transmitter and receiver accounting for
 % all the loss factors of the link
 
-lt = (gt_cld/lcld + gt_clg/lclg) * gr/loss;
+alpha = 1 / (1 + lcld/lclg);
+
+lt = alpha * (gt_cld/lcld + gt_clg/lclg) * gr/loss;
 
 % Transform the linear unit into dB
 Lt = -10*log10(lt);

@@ -499,14 +499,20 @@ clear success
 
 %% tl_p2108_3_2ray
 fprintf(1,'\n validation of tl_p2108_3_2ray\n')
-
-Y = readcsv('validation_examples/validation_example_tl_p2108_3_2ray.csv');
+filename = 'validation_examples/validation_example_tl_p2108_3_2ray.csv';
+Y = readcsv(filename);
 [nrows, ncols] = size(Y);
 Lt = zeros(nrows,1);
 sigma = zeros(nrows,1);
 L = zeros(nrows,1);
-Ntot = 100000;
-Lt_tol = 2;
+
+fid = fopen(filename, "r");
+header = fgetl(fid);
+fclose(fid);
+dummy = regexp(header,',','split');
+Ntot = str2double(dummy(end));
+
+Lt_tol = 2.5;
 sigma_tol = 0.5;
 % Progress bar header
 fprintf(1,'0%%----------100%%\n  ');

@@ -27,7 +27,7 @@ total_steps=length(fGHz)*length(theta)*length(h)*length(hm)*length(Gt_cld)*lengt
 
 fidlog = fopen('validation_examples/validation_example_tl_p2108_3_2ray.csv', 'w');
 
-fprintf(fidlog,'f (GHz), theta (deg), h (m), hm (m), Gt_cld (dBi), Gt_clg (dBi), Gr (dBi), Lb (dB), Lt(50%%), sigma (Nsamples = 20000)\n');
+fprintf(fidlog,'f (GHz), theta (deg), h (m), hm (m), Gt_cld (dBi), Gt_clg (dBi), Gr (dBi), Lb (dB), Lt(50%%), sigma, Nsamples, %d\n', Ntot);
 kk = 1;
 for ff = 1:length(fGHz)
     for it = 1:length(theta)
