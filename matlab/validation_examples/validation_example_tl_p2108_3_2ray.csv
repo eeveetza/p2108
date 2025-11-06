@@ -1,4 +1,4 @@
-f (GHz), theta (deg), h (m), hm (m), Gt_cld (dBi), Gt_clg (dBi), Gr (dBi), Lb (dB), Lt(50%), sigma (Nsamples = 20000)
+f (GHz), theta (deg), h (m), hm (m), Gt_cld (dBi), Gt_clg (dBi), Gr (dBi), Lb (dB), Lt(50%), sigma, Nsamples, 100000)
 1.0, 0.0, 1.5, 8.0, 0.0,  0.0, 0.0, 200.0, 221.50, 5.55
 1.0, 0.0, 1.5, 8.0, 0.0,  10.0, 0.0, 200.0, 220.40, 5.78
 1.0, 0.0, 1.5, 8.0, 10.0,  0.0, 0.0, 200.0, 211.68, 5.55
