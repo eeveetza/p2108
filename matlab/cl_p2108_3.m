@@ -30,16 +30,16 @@ function Lces = cl_p2108_3(f, theta, p, h, hm)
 % Checking passed parameter to the defined limits
 
 if f < 0.5 || f > 100
-   warning('cl_p2108_3: Frequency is outside of the valid domain [0.5, 100] GHz'); 
+   warning('cl_p2108_3: Frequency is outside the valid domain [0.5, 100] GHz'); 
 end
 
 if theta < 0 || theta > 90
-    warning('cl_p2108_3: Elevation angle is outside of the valid domain [0, 90] degrees'); 
+    warning('cl_p2108_3: Elevation angle is outside the valid domain [0, 90] degrees'); 
 end    
 
 
 if p <= 0 || p >= 100
-    warning('cl_p2108_3: Percentage of locations is outside of the valid domain (0, 100) %%'); 
+    warning('cl_p2108_3: Percentage of locations is outside the valid domain (0, 100) %%'); 
 end    
 
 % Table 7: plos parameters for equations (7) and (8)
@@ -151,8 +151,9 @@ if (p > pLoS)
     sigma = alpha2 + beta2 * log( 1 + ( 90 - theta) / 90 ) + f.^gamma2;   % (13b)
     
     % Qinv(1-pp) = Finv(pp)
+    %Finv = norminv(pp); % Using norminv from Statistical Toolbox
     Finv = sqrt(2) * erfinv(2*pp-1); % Using definition in P.1057
-    
+        
     Lces = max( mu + sigma*Finv, 6);
 
 
