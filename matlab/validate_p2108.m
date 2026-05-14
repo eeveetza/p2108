@@ -8,12 +8,8 @@
 %     v1    15JUL21     Ivica Stevanovic, OFCOM         Aligned to ITU-R P.2108-1
 %     v2    15JUL25     Ivica Stevanovic, OFCOM         Introduced validation for draft Revision ITU-R P.2108-2
 
-% Validation examples for §3.3 still need to be verified/confirmed
 
 errtol = 0.01;
-
-% flag: print to SEAMCAT java format
-seamcat = 0;
 
 fprintf(1,'\n validation of cl_p2108_1\n');
 %% cl_p2108_1: test1
@@ -33,24 +29,6 @@ else
     fprintf(1, 'test 1 failed, error: %f\n',err);
 end
 
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test1() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
-end
 
 %% cl_p2108_1: test 2
 type = 1;
@@ -64,24 +42,6 @@ if err < errtol
     fprintf(1,'test 2 passed\n');
 else
     fprintf(1, 'test 2 failed, error: %f\n',err);
-end
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test2() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
 end
 
 %% cl_p2108_1: test 3
@@ -97,24 +57,6 @@ if err < errtol
 else
     fprintf(1, 'test 3 failed, error: %f\n',err);
 end
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test3() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
-end
 
 
 %% cl_p2108_1: test 4
@@ -129,24 +71,7 @@ if err < errtol
 else
     fprintf(1, 'test 4 failed, error: %f\n',err);
 end
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test4() {\n');
 
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
-end
 
 %% cl_p2108_1: test 5
 
@@ -161,24 +86,6 @@ if err < errtol
 else
     fprintf(1, 'test 5 failed, error: %f\n',err);
 end
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test5() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
-end
 
 %% cl_p2108_1: test 6
 
@@ -191,24 +98,6 @@ if err < errtol
     fprintf(1,'test 6 passed\n');
 else
     fprintf(1, 'test 6 failed, error: %f\n',err);
-end
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test6() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
 end
 
 %% cl_p2108_1: test 7
@@ -224,24 +113,6 @@ if err < errtol
 else
     fprintf(1, 'test 7 failed, error: %f\n',err);
 end
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test7() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
-end
 
 %% cl_p2108_1: test 8
 
@@ -254,24 +125,6 @@ if err < errtol
     fprintf(1,'test 8 passed\n');
 else
     fprintf(1, 'test 8 failed, error: %f\n',err);
-end
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test8() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
 end
 
 %% cl_p2108_1: test 9
@@ -287,24 +140,6 @@ if err < errtol
 else
     fprintf(1, 'test 9 failed, error: %f\n',err);
 end
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test9() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
-end
 
 %% cl_p2108_1: test 10
 
@@ -319,24 +154,6 @@ else
     fprintf(1, 'test 10 failed, error: %f\n',err);
 end
 
-if (seamcat == 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test10() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-    fprintf(1,'double f = %f;\n', f);
-    fprintf(1,'double h = %f;\n', h);
-    fprintf(1,'double ws = %f;\n', ws);
-    fprintf(1,'double R = %f;\n', R);
-    fprintf(1,'int eqnum = %d;\n', eqnum);
-
-    fprintf(1,'double expectedResult = %f;\n', Ah_ref);
-
-    fprintf(1,'double result = calculator.cl_loss1(f, h, eqnum, R, ws);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult, result);\n');
-    fprintf(1,'}\n');
-end
 
 %% cl_p2108_2
 
@@ -423,47 +240,6 @@ end
 success = find(abs(round(10*Lctt)/10-Lctt_ref)<errtol);
 
 fprintf(1, '%d out of %d tests passed.\n', numel(success), numel(Lctt));
-if(seamcat== 1)
-    fprintf(1,'@Test\n');
-    fprintf(1, 'public void test11() {\n');
-
-    fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-
-
-    fprintf(1,'double[] p = new double[%d];\n', length(p));
-    fprintf(1,'double[] f = new double[%d];\n', length(f));
-    fprintf(1,'double d = %f;\n', d);
-
-    for pi = 1:length(p)
-        fprintf(1,'p[%d] = %f;\n', pi-1, p(pi));
-    end
-
-    for fi = 1:length(f)
-        fprintf(1,'f[%d] = %f;\n', fi-1, f(fi));
-    end
-
-    fprintf(1,'double[] expectedResult = new double[%d];\n', numel(Lctt));
-    count = 0;
-
-    for pi = 1:length(p)
-        for fi = 1:length(f)
-            fprintf(1,'expectedResult[%d] = %f;\n', count, Lctt(fi,pi));
-            count = count + 1;
-        end
-    end
-
-    fprintf(1,'int count = 0;\n');
-    fprintf(1,'for (int pi = 0; pi < %d; pi++) {\n', length(p));
-    fprintf(1,'for (int fi = 0; fi < %d; fi++) {\n', length(f));
-    fprintf(1,'double result = calculator.cl_loss2(f[fi],d,p[pi]);\n');
-    fprintf(1,'util.assertDoubleEquals(expectedResult[count], result);\n');
-    fprintf(1,'count = count + 1;\n');
-    fprintf(1,'}\n');
-    fprintf(1,'}\n');
-    fprintf(1,'}\n');
-end
-
-
 
 %% cl_p2108_3
 
@@ -558,45 +334,4 @@ end
 success = find( (abs( Lt-Lt_ref ) <= Lt_tol ) & (abs(sigma-sigma_ref) <= sigma_tol) );
 
 fprintf(1, '\n %d out of %d tests passed.\n', numel(success), nrows);
-
-% if (seamcat == 1)
-%     fprintf(1,'@Test\n');
-%     fprintf(1, 'public void test12() {\n');
-%
-%     fprintf(1,'P2108ver1 calculator = new P2108ver1();\n');
-%
-%
-%     fprintf(1,'double[] p = new double[%d];\n', length(p));
-%     fprintf(1,'double[] th = new double[%d];\n', length(th));
-%     fprintf(1,'double f = %f;\n', f);
-%
-%
-%     for pi = 1:length(p)
-%         fprintf(1,'p[%d] = %f;\n', pi-1, p(pi));
-%     end
-%
-%     for fi = 1:length(th)
-%         fprintf(1,'th[%d] = %f;\n', fi-1, th(fi));
-%     end
-%
-%     fprintf(1,'double[] expectedResult = new double[%d];\n', numel(Lces));
-%     count = 0;
-%
-%     for pi = 1:length(p)
-%         for fi = 1:length(th)
-%             fprintf(1,'expectedResult[%d] = %f;\n', count, Lces(pi,fi));
-%             count = count + 1;
-%         end
-%     end
-%
-%     fprintf(1,'int count = 0;\n');
-%     fprintf(1,'for (int pi = 0; pi < %d; pi++) {\n', length(p));
-%     fprintf(1,'for (int fi = 0; fi < %d; fi++) {\n', length(th));
-%     fprintf(1,'double result = calculator.cl_loss3(f,th[fi],p[pi]);\n');
-%     fprintf(1,'util.assertDoubleEquals(expectedResult[count], result);\n');
-%     fprintf(1,'count = count + 1;\n');
-%     fprintf(1,'}\n');
-%     fprintf(1,'}\n');
-%     fprintf(1,'}\n');
-% end
 
