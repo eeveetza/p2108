@@ -103,15 +103,24 @@ end
 Vmax = min(aV*h + bV, 100);
 Ce = aC*h + bC;
 k = ((h + ak)/bk).^ck;
-pLoS = max(0, Vmax * ( ( 1 - exp( -k*(theta + Ce)/90 ) ) / (1 - exp(-k*(90 + Ce) / 90 ) ) ) );
+% Resolve a possible numerical issue when kp = 0 (limit of the function)
+if (abs(k) >= 1e-6)
+    pLoS = max(0, Vmax * ( ( 1 - exp( -k*(theta + Ce)/90 ) ) / (1 - exp(-k*(90 + Ce) / 90 ) ) ) );
+else
+    pLoS = max(0, Vmax * (theta + Ce)/(90 + Ce) );
+end
 
 % Conditional probability of Fresnel zone clearance (9-10)
 
 Vmaxp = min(aVp*h + bVp, 0) * f.^(-0.55) + 100;
 Cep = (f*1e9).^aCp + bC1p * exp(bC2p * h) + bC3p * exp(bC4p * h) + cCp;
 kp = akp * exp (bkp * h);
-pFcLoS_LoS = max(0, Vmaxp * ( ( 1 - exp( -kp*(theta + Cep)/90 ) ) / (1 - exp(-kp*(90 + Cep) / 90 ) ) ) );
-
+% Resolve a possible numerical issue when kp = 0 (limit of the function)
+if (abs(kp) >= 1e-6)
+    pFcLoS_LoS = max(0, Vmaxp * ( ( 1 - exp( -kp*(theta + Cep)/90 ) ) / (1 - exp(-kp*(90 + Cep) / 90 ) ) ) );
+else
+    pFcLoS_LoS = max(0, Vmaxp *  (theta + Cep)  / (90 + Cep ) );
+end
 % Probability of a link being Fresnel clear
 
 pFcLoS = pLoS * pFcLoS_LoS / 100;     %(11)
