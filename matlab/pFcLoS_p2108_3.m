@@ -103,7 +103,7 @@ end
 Vmax = min(aV*h + bV, 100);
 Ce = aC*h + bC;
 k = ((h + ak)/bk).^ck;
-% Resolve a possible numerical issue when kp = 0 (limit of the function)
+% Resolve a possible numerical issue when k = 0 (limit of the function)
 if (abs(k) >= 1e-6)
     pLoS = max(0, Vmax * ( ( 1 - exp( -k*(theta + Ce)/90 ) ) / (1 - exp(-k*(90 + Ce) / 90 ) ) ) );
 else
